@@ -9,10 +9,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/autores")
-public class autorController {
+public class autorcontroller {
     private final AutorService autorService;
 
-    public autorController(AutorService autorService) {
+    public autorcontroller(AutorService autorService) {
         this.autorService = autorService;
     }
 

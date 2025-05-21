@@ -3,6 +3,8 @@ package com.damm.bibliotecaapi.model;
 import jakarta.persistence.*;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class autor {
     @Id
@@ -13,6 +15,7 @@ public class autor {
     private String nacionalidad;
 
     @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<libro> libros;
 
 
