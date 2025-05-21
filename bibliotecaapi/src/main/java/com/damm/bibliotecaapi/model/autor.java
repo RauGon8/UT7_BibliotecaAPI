@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-public class Autor {
+public class autor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,7 +13,7 @@ public class Autor {
     private String nacionalidad;
 
     @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Libro> libros;
+    private List<libro> libros;
 
 
     public Long getId() { return id; }
@@ -25,8 +25,8 @@ public class Autor {
     public String getNacionalidad() { return nacionalidad; }
     public void setNacionalidad(String nacionalidad) { this.nacionalidad = nacionalidad; }
 
-    public List<Libro> getLibros() { return libros; }
-    public void setLibros(List<Libro> libros) { this.libros = libros; }
+    public List<libro> getLibros() { return libros; }
+    public void setLibros(List<libro> libros) { this.libros = libros; }
 
     public void autor(){
 
