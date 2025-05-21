@@ -28,7 +28,7 @@ public class librocontroller {
     } 
 
     // GET /api/v1/libros/{id}
-    @GetMapping("id")
+    @GetMapping("/{id}")
     public ResponseEntity<libro>getLibroById(@PathVariable Long id){
         Optional<libro> libro =libroService.findById(id);
         return libro.map(ResponseEntity::ok).orElseGet(() ->ResponseEntity.notFound().build());
@@ -52,7 +52,7 @@ public class librocontroller {
     }
 
     // PUT /api/v1/libros/{id}
-    @PutMapping("id")
+    @PutMapping("/{id}")
     public ResponseEntity<libro> updateLibro(@PathVariable Long id, @RequestBody libro libroDetails) {
         Optional<libro> libroOpt =libroService.findById(id);
         if (libroOpt.isPresent()) {
@@ -72,7 +72,7 @@ public class librocontroller {
     }
 
     // DELETE /api/v1/libros/{id}
-    @DeleteMapping("id")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteLibro(@PathVariable Long id){
         if (libroService.findById(id).isPresent()){
             libroService.deleteById(id);
