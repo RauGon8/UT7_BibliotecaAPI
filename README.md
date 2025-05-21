@@ -1,1 +1,3 @@
 # UT7_BibliotecaAPI
+
+Lo primero que hicimos fue separar el controller , model , repository y service , como habiamos visto en clase y crear dentro de los mismo sus respectivas clases de java, empezamos codificando el modelo del programa , seguidamente hicimos los respositorios correspondientes , despues el services y finalemente el controller como habiamos visto anteriormente , seguidamente cambiamos el port de 8080 a 8082 ya que el 8080 nos daba problemas y por ultimo correjimos unos pocos errores de ejecucion.
